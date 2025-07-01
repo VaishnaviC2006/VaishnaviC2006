@@ -1,0 +1,39 @@
+# Step 1: Create synthetic data
+import pandas as pd
+import numpy as np
+
+np.random.seed(42)
+num_students = 100
+
+lectures_attended = np.random.randint(0, 31, size=num_students)
+marks_obtained = np.clip((lectures_attended * 0.6 + np.random.normal(0, 2, size=num_students)), 0, 20)
+
+df = pd.DataFrame({
+    'Lectures_Attended': lectures_attended,
+    'Marks_Obtained': marks_obtained.round(2)
+})
+
+df.to_csv('lecture_marks_dataset.csv', index=False)
+print("Dataset saved as 'lecture_marks_dataset.csv'")
+
+# Step 2: Load and visualize data
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import pearsonr, linregress
+
+df = pd.read_csv('lecture_marks_dataset.csv')
+
+# Visualize
+sns.scatterplot(data=df, x='Lectures_Attended', y='Marks_Obtained')
+plt.title("Lecture Attendance vs. Marks")
+plt.xlabel("Lectures Attended")
+plt.ylabel("Marks Obtained")
+plt.grid(True)
+plt.show()
+
+# Step 3: Correlation and regression
+corr, _ = pearsonr(df['Lectures_Attended'], df['Marks_Obtained'])
+print(f"Pearson Correlation: {corr:.2f}")
+
+slope, intercept, r_value, p_value, std_err = linregress(df['Lectures_Attended'], df['Marks_Obtained'])
+print(f"Regression line: Marks = {slope:.2f} * Lectures + {intercept:.2f}")

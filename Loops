@@ -1,0 +1,62 @@
+# while loop and break
+i = 1 
+while i < 10: 
+    print (i)
+    if i == 6:
+        break
+    i += 1
+
+# while loop and continue
+i = 0
+while i < 10:
+  i += 1
+  if i == 8:
+    continue
+  print(i)
+
+# else statement 
+i = 1 
+while i < 10:
+    print (i)
+    i += 1
+else: 
+    print (" i is no longer less than 10")
+
+# for loop and looping through string
+os = ["Linux" , "Windows" , "Ubantu"]
+for x in os:
+    print(x)
+for x in "Windows" :
+    print (x)
+
+# for loop with break and continue 
+os = ["Linux" , "Windows" , "Ubantu"]
+for x in os:
+    if x == "Windows":
+        break
+    print (x)
+for x in os: 
+    if x == "Windows":
+        continue
+    print(x)
+
+# range function 
+for x in range (10 ,60 ,2):
+    print (x)
+
+# range and else statement 
+for x in range(10):
+    print (x)
+else : 
+    print ("Finally Finished")
+
+# Nested Loops
+os = ["Linux" , "Windows" , "Ubantu"]
+lan = ["C" , "C++" , "Python"]
+for x in os:
+    for y in lan:
+        print (x,y)
+
+# pass statement 
+for x in [0,1,2,3]:
+    pass

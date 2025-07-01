@@ -1,0 +1,53 @@
+# Creating a dictionary
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+print("Brand:", thisdict["brand"])
+
+# Duplicate keys: the last one will overwrite the previous
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "year": 2020
+}
+print("Dictionary with duplicate key:", thisdict)
+
+# Checking type
+print("Type of thisdict:", type(thisdict))
+
+# Creating a dictionary using the dict() constructor
+thisdict = dict(name="John", age=36, country="Norway")
+print("Using dict() constructor:", thisdict)
+
+# Accessing dictionary values
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+print("Model:", thisdict["model"])
+print("Model using get():", thisdict.get("model"))
+
+# Getting keys
+keys = thisdict.keys()
+print("Keys:", keys)
+
+# Adding a new item updates keys view
+thisdict["color"] = "White"
+print("Updated Keys:", keys)
+
+# Getting values
+values = thisdict.values()
+print("Values:", values)
+
+# Updating values reflects in values view
+thisdict["year"] = 2022
+thisdict["color"] = "Red"
+print("Updated Values:", values)
+
+# Getting items (key-value pairs)
+items = thisdict.items()
+print("Items:", items)

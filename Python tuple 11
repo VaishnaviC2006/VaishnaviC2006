@@ -1,0 +1,41 @@
+student_info = ("Jay", 19, "A Grade")
+print(f"Name: {student_info[0]}")
+print(f"Age: {student_info[1]}")
+print(f"Grade: {student_info[2]}")
+
+grocery_items = [("Rice", 50), ("Milk", 30), ("Eggs", 60), ("Bread", 25), ("Butter", 40)]
+total_cost = sum(item[1] for item in grocery_items)
+for item, price in grocery_items:
+    print(f"{item}: ₹{price}")
+print(f"Total Cost: ₹{total_cost}")
+
+items = ("Milk", "Eggs", "Bread")
+prices = (25, 50, 20)
+item_price_pairs = tuple(zip(items, prices))
+print(item_price_pairs)
+
+train_schedule = (("Train Name", "Departure"), ("Rajdhani", "10:00"), ("Shatabdi", "12:30"), ("Duronto", "17:00"))
+for train in train_schedule:
+    print(f"{train[0]:<10} {train[1]:<15}")
+
+employees = [("John", "40000"), ("John", "40000"), ("John", "40000")]
+sorted_employees = sorted(employees, key=lambda x: int(x[1]))
+
+student_marks = (67, 88, 92, 74, 76, 55)
+count_above_75 = sum(1 for mark in student_marks if mark > 75)
+
+stock_prices = (154.5, 160.2, 149.8, 170.1)
+max_price_tuple = (max(stock_prices),)
+
+temperature_readings = (29.5, 30.0, 32.2, 31.5, 28.9)
+average_temperature = sum(temperature_readings) / len(temperature_readings)
+result = (temperature_readings, average_temperature)
+
+appointments = []
+def schedule_appointment(name, time):
+    appointment = (name, time)
+    appointments.append(appointment)
+
+contacts = [("Anil", "9876543210"), ("Priya", "9123456780")]
+
+exam_schedule = (("Math", "9:00 AM"), ("Math", "9:00 AM"), ("English", "2:00 PM"))

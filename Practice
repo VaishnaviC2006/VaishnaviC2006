@@ -1,0 +1,37 @@
+# Student Info
+studinfo = ("Jay", 19, "A Grade")
+print(f"Name: {studinfo[0]}")
+print(f"Age: {studinfo[1]}")
+print(f"Grade: {studinfo[2]}")
+
+# Grocery List with Prices
+gro_itm = [("Rice", 90), ("Milk", 50), ("Eggs", 60), ("Bread", 45), ("Butter", 120)]
+totalcost = sum(itm[1] for itm in gro_itm)
+print("Grocery List: ")
+for itm, price in gro_itm:
+    print(f"{itm}: ₹{price}")
+print(f"\nTotal Cost: ₹{totalcost}")
+
+# Zipping Items with Prices
+itm = ("Milk", "Eggs", "Bread")
+prices = (25, 50, 20)
+itm_price = tuple(zip(itm, prices))
+print(itm_price)
+
+# Train Schedule
+trn_sch = (("Rajdhani", "10:00"), ("Shatabdi", "12:30"), ("Doronto", "17:00"))
+print("Train Schedule: ")
+for trn, time in trn_sch:
+    print(f"{trn} departs at {time}")
+
+# Sorting Employees by Salary
+empl = [("John", "40000"), ("Alice", "55000"), ("Raj", "30000")]
+sortd_empl = sorted(empl, key=lambda x: int(x[1]))
+print("Employees sorted by salary:")
+for empl in sortd_empl:
+    print(empl)
+
+# Count Students with Marks > 75
+stud_mrk = (67, 88, 92, 74, 76, 55)
+cnt_above_75 = sum(1 for mrk in stud_mrk if mrk > 75)
+print(f"Number of students who scored above 75: {cnt_above_75}")

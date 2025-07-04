@@ -1,0 +1,36 @@
+# Basic Python Set Operations
+
+# Creating sets
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+print("Set 1:", set1)
+print("Set 2:", set2)
+
+# Union
+union_set = set1.union(set2)
+print("Union:", union_set)
+
+# Intersection
+intersection_set = set1.intersection(set2)
+print("Intersection:", intersection_set)
+
+# Difference
+difference_set = set1.difference(set2)
+print("Difference (Set1 - Set2):", difference_set)
+
+# Symmetric Difference
+symmetric_diff_set = set1.symmetric_difference(set2)
+print("Symmetric Difference:", symmetric_diff_set)
+
+# Adding an element
+set1.add(10)
+print("Set1 after adding 10:", set1)
+
+# Removing an element
+set2.discard(6)
+print("Set2 after removing 6:", set2)
+
+# Check if a value is in the set
+print("Is 3 in Set1?", 3 in set1)
+print("Is 9 in Set2?", 9 in set2)

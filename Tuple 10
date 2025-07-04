@@ -1,0 +1,23 @@
+def check(number):
+    if number % 2 == 0:
+        print(f"{number} is even.")
+    else:
+        print(f"{number} is odd.")
+
+number = int(input("Enter a number: "))
+check(number)
+
+def countdigits(n):
+    return len(str(n))
+
+n = int(input("Enter the number: "))
+countdigits(n)
+
+def reverse_num(rows):
+    for i in range(rows, 0, -1):
+        for j in range(i, 0, -1):
+            print(j, end=" ")
+        print(" ")
+
+n = int(input("Enter the number: "))
+reverse_num(n)

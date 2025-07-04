@@ -1,0 +1,45 @@
+# Operators and If-Else in Python
+
+# Arithmetic Operators
+a = 10
+b = 5
+
+print("Arithmetic Operators:")
+print(f"a + b = {a + b}")
+print(f"a - b = {a - b}")
+print(f"a * b = {a * b}")
+print(f"a / b = {a / b}")
+print(f"a % b = {a % b}")
+print(f"a ** b = {a ** b}")
+print(f"a // b = {a // b}")
+print()
+
+# Relational Operators
+print("Relational Operators:")
+print(f"a > b: {a > b}")
+print(f"a < b: {a < b}")
+print(f"a == b: {a == b}")
+print(f"a != b: {a != b}")
+print(f"a >= b: {a >= b}")
+print(f"a <= b: {a <= b}")
+print()
+
+# Logical Operators
+x = True
+y = False
+
+print("Logical Operators:")
+print(f"x and y: {x and y}")
+print(f"x or y: {x or y}")
+print(f"not x: {not x}")
+print()
+
+# If-Else Conditions
+number = int(input("Enter a number: "))
+
+if number > 0:
+    print("The number is positive.")
+elif number == 0:
+    print("The number is zero.")
+else:
+    print("The number is negative.")
